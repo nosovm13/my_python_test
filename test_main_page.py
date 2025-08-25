@@ -28,3 +28,10 @@ def test_guest_should_see_correct_login_page(browser):
     page = LoginPage(browser, link)
     page.open()
     page.should_be_login_page()
+
+def test_guest_should_see_correct_login_page_after_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com"
+    mainPage = MainPage(browser, link)
+    mainPage.open()
+    loginPage = mainPage.go_to_login_page()
+    loginPage.should_be_login_page()
