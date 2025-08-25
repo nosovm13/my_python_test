@@ -28,7 +28,13 @@ def test_guest_should_see_login_link(browser):
     page.should_be_login_link()    
 
 def test_guest_should_see_login_area(browser):
-    link = "http://selenium1py.pythonanywhere.com/"
+    link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
     page = LoginPage(browser, link)
     page.open()
     page.should_be_login_form()
+
+def test_guest_should_see_register_area(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+    page = LoginPage(browser, link)
+    page.open()
+    page.should_be_register_form()

@@ -4,4 +4,5 @@ class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     
 class LoginPageLocators:
-    LOG_IN_AREA = (By.CSS_SELECTOR, ".form-control")
+    LOGIN_AREA = (By.CSS_SELECTOR, "#id_login-username")
+    REGISTER_AREA = (By.CSS_SELECTOR, "#id_registration-email")

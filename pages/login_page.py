@@ -15,8 +15,8 @@ class LoginPage(BasePage):
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
-        assert self.if_element_present(*LoginPageLocators.LOG_IN_AREA), "Поле ввода логина не обнаружено"
+        assert self.if_element_present(*LoginPageLocators.LOGIN_AREA), "Поле ввода логина не обнаружено"
 
     def should_be_register_form(self):
         # реализуйте проверку, что есть форма регистрации на странице
-        assert True
+        assert self.if_element_present(*LoginPageLocators.REGISTER_AREA), "Поле регистрации не обнаружено"
