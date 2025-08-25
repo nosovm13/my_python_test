@@ -1,7 +1,7 @@
 from .base_page import BasePage
 from selenium.webdriver.common.by import By
 from .locators import LoginPageLocators
-
+from selenium import webdriver
 class LoginPage(BasePage):
 
     def should_be_login_page(self):
@@ -11,7 +11,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        assert True
+        assert "/accounts/login" in self.browser.current_url, f"Ожидали URL логина, а получен {self.browser.current_url}"
 
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
